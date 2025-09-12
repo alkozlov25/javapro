@@ -1,0 +1,4 @@
+2025-09-05 20:47:12.087014+04:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DEPARDADSFTMENT" не найдена
+Table "DEPARDADSFTMENT" not found; SQL statement:
+SELECT name FROM Depardadsftment [42102-224]
