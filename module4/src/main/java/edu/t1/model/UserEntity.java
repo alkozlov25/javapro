@@ -1,4 +1,4 @@
-package edu.t1;
+package edu.t1.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Table(name = "Users")
 @Entity
-class UserEntity {
+public class UserEntity {
     @Id
     private Integer id;
 

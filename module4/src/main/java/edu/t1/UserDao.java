@@ -1,5 +1,6 @@
 package edu.t1;
 
+import edu.t1.dto.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

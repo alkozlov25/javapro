@@ -1,5 +1,8 @@
-package edu.t1;
+package edu.t1.service;
 
+import edu.t1.dto.User;
+import edu.t1.model.UserEntity;
+import edu.t1.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,24 +15,24 @@ public class UserService {
     //private final UserDao userDao;
     private final UserRepository userRepository;
 
-    List<User> findAll() {
+    public List<User> findAll() {
         return userRepository.findAll()
                 .stream()
                 .map(x -> new User(x.getId(), x.getUsername()))
                 .collect(Collectors.toList());
     }
 
-    User findById(Integer id) {
+    public User findById(Integer id) {
         return userRepository.findById(id)
                 .map(x -> new User(x.getId(), x.getUsername()))
                 .orElse(null);
     }
 
-    void addUser(User newUser) {
+    public void addUser(User newUser) {
         userRepository.save(new UserEntity(newUser.getId(), newUser.getUsername()));
     }
 
-    void delUserById(Integer id) {
+    public void delUserById(Integer id) {
         userRepository.deleteById(id);
     }
 }
