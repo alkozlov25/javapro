@@ -2,15 +2,13 @@ package edu.t1.model;
 
 import edu.t1.enums.ProductType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "Product")
 @Entity
 public class ProductEntity {
